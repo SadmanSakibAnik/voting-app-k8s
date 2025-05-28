@@ -92,7 +92,7 @@ kubectl get svc -n argocd
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 
 # Port forward for browser
-kubectl port-forward -n argocd service/argocd-server -n argocd 8443:443 &
+kubectl port-forward service/argocd-server -n argocd 8443:443 &
 ```
 
 ---
